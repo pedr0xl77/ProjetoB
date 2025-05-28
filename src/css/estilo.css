@@ -1,4 +1,5 @@
 /*Reset Básico*/
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
 }
 body {
     background: #f4f4f4;
+     font-family: "Roboto", sans-serif;
 }
 #container {
     display: flex;
@@ -81,48 +83,6 @@ button:hover{
     background-image: linear-gradient(green, black)
 }
 
-@media(max-width:768px){
-
-    header nav ul{
-        display: flex;
-        flex-direction: column;
-        gap:1rem;
-        align-items: center;
-       
-    }
-    header nav ul li{
-        width: 300px;
-        height: 50px;
-        text-align: center;
-        border-radius: 40px;
-        font-size: 1.3rem;
-        background-image: linear-gradient(aqua,black);
-    }
-    header nav ul li a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color:#000; 
-    }
-    header nav ul li a:hover{
-        text-decoration: none;
-    }
-    #conteudo{
-        grid-template-columns: 1fr;
-    }
-    aside{
-        display: none;
-    }
- 
-    .footer-content{
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        max-width: 100%;
-        margin:  0 auto;
-    }
-}
-
 aside{
     width: 220px;
     padding: 10px;
@@ -159,4 +119,47 @@ footer{
     color:#000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width:768px){
+     
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        align-items: center;
+    }
+
+     header nav ul li{
+        width: 300px;
+        height: 50px;
+        text-align: center;
+        border-radius: 40px;
+        font-size: 1.3rem;
+        background-image: linear-gradient(green,black);
+    }
+
+    header nav ul li a{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        margin-top: 10px;
+    }
+
+    #conteudo{
+        grid-template-columns: 1fr;
+    }
+
+    aside{
+        display: none;
+    }
+
+    .footer-content{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        max-width: 100%;
+    }
 }
